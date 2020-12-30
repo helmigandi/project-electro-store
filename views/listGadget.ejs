@@ -1,0 +1,9 @@
+<%- include('partials/header', { pageName: 'Banana Gadget Store' }) %>
+
+<%- include('partials/search') %>
+<div style="font-size: 18px; text-align: center;">
+  <a href="/gadgets/add">Add New Gadget</a>
+</div>
+<%- include('partials/gadget', { gadgetData, pageType: 'listGadget', formatPrice }) %>
+
+<!-- <%- include('partials/footer', { footerDescription: 'Copyright Helmi Sugandi 2020' }) %> -->

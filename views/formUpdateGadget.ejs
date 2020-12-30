@@ -1,0 +1,27 @@
+<%- include('partials/header', { pageName: 'Banana Gadget Store' }) %>
+
+<div>
+  <form action="/gadgets/update/<%= gadgetData.id %>" method="post">
+    <div style="padding: 20px;">
+      <label for="name">Product Name: </label>
+      <input type="text" placeholder="e.g: Macbook Pro M1" name="name" id="name" value="<%= gadgetData.name %>">
+    </div>
+    <div style="padding: 20px;">
+      <label for="price">Price: </label>
+      <input type="number" placeholder="e.g: 13000000" step="0.01" name="price" id="price" value="<%= gadgetData.price %>">
+    </div>
+    <div style="padding: 20px;">
+      <label for="stock">Stock: </label>
+      <input type="number" placeholder="e.g: 20" name="stock" id="stock" value="<%= gadgetData.stock %>">
+    </div>
+    <div style="padding: 20px;">
+      <label for="description">Description: </label>
+      <textarea name="description" id="description" cols="30" rows="10" placeholder="Spesifikasi Product"><%= gadgetData.description %></textarea>
+    </div>
+    <div style="padding: 20px;">
+      <input type="submit" value="Update Gadget">
+    </div>
+  </form>
+</div>
+
+<!-- <%- include('partials/footer', { footerDescription: 'Copyright Helmi Sugandi 2020' }) %> -->

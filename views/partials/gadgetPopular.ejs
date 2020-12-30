@@ -1,0 +1,39 @@
+<h2>Popular Gadget</h2>
+<div>
+  <table border="1" style="margin: auto;">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Stock</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% threePopularGadgets.forEach((gadget, idx)=> { %>
+        <tr>
+          <td>
+            <%= idx+1 %>
+          </td>
+          <td>
+            <%= gadget.name %>
+          </td>
+          <td>
+            <%= gadget.description %>
+          </td>
+          <td>
+            <%= gadget.stock %>
+          </td>
+          <td>
+            <%= formatPrice(gadget.price) %>
+          </td>
+          <td>
+            <a href="#">Buy</a>
+          </td>
+        </tr>
+        <% }); %>
+    </tbody>
+  </table>
+</div>
